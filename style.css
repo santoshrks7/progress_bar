@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+.box::before {
+    content: '';
+    background-color: gainsboro;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+.box {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.progress {
+    background-color: aqua;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+.circles {
+    display: flex;
+    /* background-color: aqua; */
+    width: 350px;
+    justify-content: space-between;
+}
+.circle {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
+    border-radius: 50%;
+    border: 3px solid gainsboro;
+}
+.btn1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.btn{
+    background-color: aqua;
+    padding: 8px 30px;
+    border-radius: 5px;
+}
+
+.circle.active{
+    border: 3px solid aqua;
+}
+
